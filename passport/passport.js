@@ -1,5 +1,5 @@
 const passport = require('passport');
-const User = require('../models/user');
+const User = require('../models/User');
 // Door de volgende lijnen code zeggen we hoe de gebruiker al dan niet mag inloggen en hoe gebruiker mag registreren 
 passport.use(User.createStrategy());
 

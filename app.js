@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const testRouter = require('./routes/api/v1/test');
 
 const mongoose = require('mongoose');
+// mongoose.set('useCreateIndex', true);
 mongoose.connect('mongodb://127.0.0.1:27017/test');
 
 

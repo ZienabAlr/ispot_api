@@ -13,17 +13,22 @@ const create = (req, res) => {
     // console.log(req.body);
 
     let test = new Test(); 
-    test.name = req.body.name;
-    test.age = req.body.age;
-    test.save().then((newTest) => {
-        res.json(newTest);
-    }
-    ).catch((err) => {
-        res.status(500).json(err);
+    test.url = req.body.url;
+    test.meaning = req.body.meaning;
+   
+    test.save().then( result => {
+       
+        res.json({
+            "status": "success"
+        })
+
+    }).catch((err) => {
+        res.json({
+            "status": "error"
+          
+        })
     }
     );
-
-
 
 
 }
